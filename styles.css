@@ -1,0 +1,272 @@
+/* Custom Properties */
+:root {
+  --primary: #333333; /* Changed from #1d4ed8 to dark gray */
+  --transition: all 0.3s ease;
+}
+
+/* General Styles */
+body {
+  padding-top: 76px;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-delayed {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition);
+  transition-delay: 0.2s;
+}
+
+.fade-in-delayed.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: #ffffff;
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+}
+
+/* Hover Effects */
+.hover-scale {
+  transition: var(--transition);
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.hover-card {
+  transition: var(--transition);
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Navigation */
+.navbar {
+  transition: var(--transition);
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-logo {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+/* Form Styles */
+.form-control {
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.25rem rgba(29, 78, 216, 0.25);
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: #666666;
+  border-color: #666666;
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: #666666;
+  border-color: #666666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .hero-section {
+    text-align: center;
+  }
+
+  .hero-section .d-flex {
+    justify-content: center;
+  }
+}
+
+/* Chat Preview Styles */
+.chat-preview {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+/* Features Section Styles */
+.features-title {
+  font-size: 2.5rem;
+  font-weight: 700 !important;
+  margin-bottom: 1rem;
+}
+
+.features-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.features-description {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+/* What to Expect Section Styles */
+#expect .card {
+  transition: all 0.3s ease;
+}
+
+#expect .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+#expect .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+#expect .h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#expect .text-muted {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  #expect .card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Features and About Section Styles */
+.features-title,
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700 !important;
+  margin-bottom: 1rem;
+}
+
+.features-subtitle,
+.about-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.features-description,
+.about-description {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-bottom: 3rem;
+}
+
+/* Team Image Styles */
+.team-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  #dataperform .col-lg-6 {
+    margin-bottom: 2rem;
+  }
+  #dataperform .text-end {
+    text-align: center !important;
+  }
+  .features-description,
+  .about-description {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Contact Info Styles */
+.contact-info {
+  background-color: #f8f9fa;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contact-info .h5 {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.contact-info svg {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-info p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .contact-info {
+    margin-top: 2rem;
+  }
+}
+

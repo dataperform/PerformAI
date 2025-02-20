@@ -1,2 +1,1 @@
-# PerformAI
-PerformAI
+# © 2025 PerformAI | A IA da DataPerform
